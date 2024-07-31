@@ -1,3 +1,4 @@
+/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
@@ -5,18 +6,24 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
   color: #333;
 }
 
 header {
-  background: #000;
-  padding: 10px 20px;
+  background: #111;
+  padding: 15px 30px;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+header.scrolled {
+  background: rgba(17, 17, 17, 0.95);
 }
 
 nav {
@@ -27,23 +34,29 @@ nav {
 
 .logo {
   color: #fff;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
 }
 
 .menu {
   list-style: none;
   display: flex;
+  align-items: center;
 }
 
 .menu li {
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 .menu li a {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #ff6347;
 }
 
 .menu-toggle {
@@ -53,10 +66,11 @@ nav {
 }
 
 .menu-toggle span {
-  width: 25px;
+  width: 30px;
   height: 3px;
   background: #fff;
-  margin: 4px 0;
+  margin: 5px 0;
+  transition: all 0.3s ease;
 }
 
 .hero-section {
@@ -67,11 +81,30 @@ nav {
   align-items: center;
   text-align: center;
   color: #fff;
+  padding: 0 20px;
+  position: relative;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content h1 {
-  font-size: 48px;
+  font-size: 54px;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .hero-content p {
@@ -80,29 +113,60 @@ nav {
 }
 
 .hero-content .btn {
-  background: #000;
+  background: #ff6347;
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 30px;
   text-decoration: none;
   font-size: 18px;
   border: none;
   cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero-content .btn:hover {
+  background: #e5533b;
 }
 
 .about-section,
 .products-section,
 .contact-section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #ff6347;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
 }
 
 .product-grid {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
 }
@@ -111,17 +175,32 @@ nav {
   border: 1px solid #ddd;
   padding: 20px;
   text-align: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .product-card img {
   width: 100%;
   height: auto;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  font-size: 22px;
+  margin: 20px 0 10px;
 }
 
 .contact-section form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .contact-section label {
@@ -131,23 +210,36 @@ nav {
 
 .contact-section input,
 .contact-section textarea {
-  padding: 10px;
+  padding: 15px;
   font-size: 16px;
   border: 1px solid #ddd;
+  border-radius: 5px;
   width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: #ff6347;
 }
 
 .contact-section button {
-  background: #000;
+  background: #ff6347;
   color: #fff;
-  padding: 10px 20px;
+  padding: 15px;
   border: none;
   cursor: pointer;
   font-size: 18px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.contact-section button:hover {
+  background: #e5533b;
 }
 
 footer {
-  background: #000;
+  background: #111;
   color: #fff;
   text-align: center;
   padding: 20px;
@@ -157,18 +249,19 @@ footer {
   .menu {
     display: none;
     flex-direction: column;
-    background: #000;
+    background: #111;
     position: absolute;
     top: 60px;
     right: 20px;
-    width: 200px;
+    width: 250px;
     border-radius: 8px;
     overflow: hidden;
+    z-index: 1000;
   }
 
   .menu li {
     margin: 0;
-    padding: 10px 20px;
+    padding: 15px 20px;
     text-align: right;
   }
 
@@ -178,5 +271,13 @@ footer {
 
   .menu.show {
     display: flex;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
   }
 }
