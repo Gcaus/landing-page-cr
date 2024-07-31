@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Streetwear Masculina</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Streetwear</div>
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="menu" id="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+      <div class="hero-content">
+        <h1>Moda Streetwear Masculina</h1>
+        <p>Explore as últimas tendências em streetwear.</p>
+        <a href="#produtos" class="btn">Ver Produtos</a>
+      </div>
+    </section>
+
+    <section id="sobre" class="about-section">
+      <div class="container">
+        <h2>Sobre Nós</h2>
+        <p>
+          Somos uma marca de streetwear focada em oferecer os melhores estilos
+          para o público masculino. Nossos produtos são de alta qualidade e
+          seguem as tendências mais recentes da moda urbana.
+        </p>
+      </div>
+    </section>
+
+    <section id="produtos" class="products-section">
+      <div class="container">
+        <h2>Nossos Produtos</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="product1.jpg" alt="Produto 1" />
+            <h3>Produto 1</h3>
+            <p>Descrição do produto 1.</p>
+          </div>
+          <div class="product-card">
+            <img src="product2.jpg" alt="Produto 2" />
+            <h3>Produto 2</h3>
+            <p>Descrição do produto 2.</p>
+          </div>
+          <div class="product-card">
+            <img src="product3.jpg" alt="Produto 3" />
+            <h3>Produto 3</h3>
+            <p>Descrição do produto 3.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contact-section">
+      <div class="container">
+        <h2>Contato</h2>
+        <form>
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" required></textarea>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Streetwear. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
