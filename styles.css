@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.6;
   color: #333;
 }
@@ -161,7 +161,7 @@ h2::after {
 
 p {
   font-size: 18px;
-  color: #666;
+  color: #afafaf;
 }
 
 .product-grid {
@@ -198,20 +198,20 @@ p {
 .contact-section form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   max-width: 600px;
   margin: 0 auto;
 }
 
 .contact-section label {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 5px;
 }
 
 .contact-section input,
 .contact-section textarea {
-  padding: 15px;
-  font-size: 16px;
+  padding: 10px;
+  font-size: 14px;
   border: 1px solid #ddd;
   border-radius: 5px;
   width: 100%;
@@ -226,10 +226,10 @@ p {
 .contact-section button {
   background: #ff6347;
   color: #fff;
-  padding: 15px;
+  padding: 10px;
   border: none;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 5px;
   transition: background 0.3s ease;
 }
@@ -242,7 +242,11 @@ footer {
   background: #111;
   color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 @media (max-width: 768px) {

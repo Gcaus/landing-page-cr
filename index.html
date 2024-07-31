@@ -1,82 +1,88 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Streetwear Masculina</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Streetwear Landing Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
       <nav>
         <div class="logo">Streetwear</div>
-        <div class="menu-toggle" id="menu-toggle">
+        <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#products">Produtos</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+        <div class="menu-toggle">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <ul class="menu" id="menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#produtos">Produtos</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
       </nav>
     </header>
 
-    <section id="home" class="hero-section">
+    <section class="hero-section">
       <div class="hero-content">
-        <h1>Moda Streetwear Masculina</h1>
-        <p>Explore as últimas tendências em streetwear.</p>
-        <a href="#produtos" class="btn">Ver Produtos</a>
+        <h1>Bem-vindo ao Streetwear</h1>
+        <p>Moda urbana e estilo único.</p>
+        <a href="#products" class="btn">Veja nossos produtos</a>
       </div>
     </section>
 
-    <section id="sobre" class="about-section">
+    <section id="about" class="about-section">
       <div class="container">
         <h2>Sobre Nós</h2>
         <p>
-          Somos uma marca de streetwear focada em oferecer os melhores estilos
-          para o público masculino. Nossos produtos são de alta qualidade e
-          seguem as tendências mais recentes da moda urbana.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a
+          ultricies metus.
         </p>
       </div>
     </section>
 
-    <section id="produtos" class="products-section">
+    <section id="products" class="products-section">
       <div class="container">
         <h2>Nossos Produtos</h2>
         <div class="product-grid">
           <div class="product-card">
-            <img src="product1.jpg" alt="Produto 1" />
+            <img src="assets/product1.jpg" alt="Produto 1" />
             <h3>Produto 1</h3>
-            <p>Descrição do produto 1.</p>
+            <p>Descrição do Produto 1.</p>
           </div>
           <div class="product-card">
-            <img src="product2.jpg" alt="Produto 2" />
+            <img src="assets/product2.jpg" alt="Produto 2" />
             <h3>Produto 2</h3>
-            <p>Descrição do produto 2.</p>
+            <p>Descrição do Produto 2.</p>
           </div>
           <div class="product-card">
-            <img src="product3.jpg" alt="Produto 3" />
+            <img src="assets/product3.jpg" alt="Produto 3" />
             <h3>Produto 3</h3>
-            <p>Descrição do produto 3.</p>
+            <p>Descrição do Produto 3.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contato" class="contact-section">
+    <section id="contact" class="contact-section">
       <div class="container">
         <h2>Contato</h2>
         <form>
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" required />
-          <label for="email">Email:</label>
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
           <input type="email" id="email" name="email" required />
-          <label for="mensagem">Mensagem:</label>
-          <textarea id="mensagem" name="mensagem" required></textarea>
-          <button type="submit" class="btn">Enviar</button>
+
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Enviar</button>
         </form>
       </div>
     </section>
